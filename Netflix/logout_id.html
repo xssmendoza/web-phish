@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./assets/netflix.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="components.css" />
+    <link rel="stylesheet" href="logout.css" />
+
+    <title>Netflix Clone</title>
+  </head>
+
+  <body>
+    <nav class="nav nav-1">
+      <a href="home_id.html">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Logonetflix.png/1600px-Logonetflix.png" alt="" />
+      </a>
+      <a href="login_id.html" class="btn btn-signin">Masuk</a>
+    </nav>
+
+    <section class="redirected">
+      <div class="logout-container margin-inline">
+        <h1 class="text-black margin-bottom-1">Sudah Mau Keluar?</h1>
+        <p class="text-black">
+          Sekadar informasi, kamu tidak harus selalu keluar dari Netflix. Tindakan ini diperlukan hanya jika kamu menggunakan komputer bersama atau umum. <br />
+          <br />
+          Kamu akan dialihkan ke Netflix.com dalam 30 detik.
+        </p>
+
+        <a href="home_id.html" class="btn btn-gonow margin-top-2 margin-bottom">Mulai Sekarang</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container margin-inline">
+        <p>
+          Ada pertanyaan? <br />
+          Hubungi 007-803-321-2148
+        </p>
+        <div class="links">
+          <ul class="">
+            <li><a class="text-terms text-underline" href="">Tanya Jawab</a></li>
+            <li><a class="text-terms text-underline" href="">Preferensi Cookie</a></li>
+          </ul>
+
+          <ul>
+            <li><a class="text-terms text-underline" href="">Pusat Bantuan</a></li>
+            <li><a class="text-terms text-underline" href="">Informasi Perusahaan</a></li>
+          </ul>
+
+          <a class="text-terms text-underline" href="">Ketentuan Penggunaan</a>
+
+          <a class="text-terms text-underline" href="">Privasi</a>
+        </div>
+
+        <div class="language">
+          <select class="language-select" onchange="location=this.value;">
+            <option value="logout_en.html">English</option>
+            <option value="" selected>Bahasa Indonesia</option>
+          </select>
+          <div class="language-icon">
+            <i class="fas fa-globe globe"></i>
+            <i class="fas fa-chevron-down chevron"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

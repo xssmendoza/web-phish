@@ -1,0 +1,391 @@
+/* Basic Styling --------------------------------- */
+
+img {
+  width: 2.6rem;
+}
+body {
+  background-color: white;
+  user-select: none;
+}
+.text-error {
+  color: var(--color-invalid);
+}
+
+/* Nav, Footer ----------------------------------- */
+
+.nav-planform,
+.footer-planform {
+  padding-inline: 2rem;
+}
+
+/* Container ------------------------------------- */
+
+.main-container,
+.pay-container {
+  display: grid;
+  place-content: center;
+  min-height: 67vh;
+  padding: 2rem;
+  max-width: 30rem;
+  animation: form ease-in-out 0.6s;
+}
+.container-table {
+  max-width: 64rem;
+  animation: form ease-in-out 0.6s;
+  padding: 4rem;
+}
+
+.welcome,
+.choose,
+.enter {
+  padding-block: 4rem;
+  padding-inline: 2rem;
+}
+
+/* Sign Up --------------------------------------- */
+
+.plan-feature {
+  justify-content: center;
+  display: grid;
+  gap: 0.6rem;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Payment, Credit ------------------------------- */
+
+.encrypt {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: flex-end;
+  margin-bottom: 0.6rem;
+}
+.encrypt i {
+  color: orange;
+  font-size: 0.8rem;
+}
+
+.method {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+}
+.pay-method {
+  display: grid;
+  gap: 0.6rem;
+}
+.method p {
+  margin-right: 0.6rem;
+  color: black;
+}
+
+/* Planform -------------------------------------- */
+
+.plan-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+.choose-plan {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.table-res {
+  margin-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.line {
+  position: relative;
+  top: -25rem;
+  opacity: 0.4;
+  display: grid;
+  gap: 3rem;
+}
+
+.tab-hidden .tab-label,
+.tab-hidden .label {
+  background: transparent;
+  color: transparent;
+}
+.tab-input,
+.tab-input-none {
+  display: none;
+}
+
+.label {
+  width: 8rem;
+  height: 7rem;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.tab-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-tab);
+  width: 100%;
+  height: 100%;
+}
+
+.tab-input:checked + .label {
+  background: var(--color-invalid);
+  box-shadow: 0 0 0.5rem var(--color-invalid-shadow);
+}
+.tab-input:checked + .label + .content-list {
+  color: var(--color-invalid);
+}
+
+.content-list {
+  margin-top: 1rem;
+  text-align: center;
+  color: gray;
+}
+.device-list {
+  display: grid;
+}
+.terms {
+  margin-top: -4.6rem;
+  max-width: 49rem;
+}
+
+/* Wallet ---------------------------------------- */
+
+.wallet {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wallet-input {
+  display: none;
+}
+.wallet-label {
+  color: transparent;
+  cursor: pointer;
+  padding: 1rem;
+}
+.wallet-bg {
+  height: 2.7rem;
+  width: 4.2rem;
+}
+.wallet-bg:hover {
+  opacity: 0.7;
+}
+.wallet-content {
+  order: 1;
+  display: none;
+}
+.wallet p {
+  color: var(--color-forgot);
+}
+.wallet-input:checked + .wallet-bg {
+  border: 2px solid var(--color-forgot);
+  border-radius: 0.3rem;
+}
+.wallet-input:checked + .wallet-bg + .wallet-content {
+  display: block;
+}
+.dana {
+  background: url("https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/dana.svg") center center no-repeat;
+}
+.gopay {
+  background: url("https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/gopay.svg") center center no-repeat;
+}
+.ovo {
+  background: url("https://assets.nflxext.com/ffe/siteui/acquisition/payment/svg/ovo.svg") center center no-repeat;
+}
+
+/* Input ----------------------------------------- */
+
+.input-field {
+  border: 1px solid gray;
+}
+.input-field-phone {
+  padding-inline: 7rem 1rem;
+}
+.input-label-phone {
+  left: 7rem;
+}
+.question {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 0.86rem;
+  color: gray;
+}
+.phone {
+  position: absolute;
+  top: 1.1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.flag {
+  border: 1px solid var(--color-flag);
+  border-radius: 0.2rem;
+}
+.input-field:focus {
+  border: 1px solid var(--color-forgot);
+}
+.input-field:valid {
+  border: 1px solid var(--color-valid);
+}
+.input-field:not(:placeholder-shown):invalid {
+  border: 1px solid var(--color-invalid);
+}
+.input-field-phone:focus ~ .label-size,
+.input-field-phone:not(:placeholder-shown) ~ .label-size {
+  top: 0.6rem;
+  left: 7rem;
+  font-size: 0.8em;
+}
+
+/* Animation -------------------------------------- */
+
+@keyframes form {
+  from {
+    transform: translateX(2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media Query ------------------------------------ */
+
+/* Planform */
+
+@media (700px <= width <= 880px) {
+  .container-table {
+    padding: 2rem;
+  }
+  .label {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media (320px <= width <= 700px) {
+  .nav-planform {
+    padding-inline: 1.6rem;
+  }
+  .container-table {
+    padding: 2rem 1.6rem;
+  }
+  h1 {
+    max-width: 26rem;
+  }
+  .text-content {
+    line-height: 5;
+  }
+  .text-absolute {
+    display: grid;
+    gap: 2.42rem;
+    position: absolute;
+    top: 5.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .text-icon {
+    margin-top: 1.6rem;
+  }
+  .text-content {
+    font-size: 0.76rem;
+  }
+  .hide {
+    display: none;
+  }
+  .label {
+    height: 5rem;
+  }
+  .content-list {
+    margin-top: 1.4rem;
+  }
+  .line {
+    top: -31rem;
+    gap: 3.64rem;
+  }
+  .terms {
+    margin-top: -6.4rem;
+  }
+}
+@media (320px <= width <= 580px) {
+  .text-table-head {
+    font-size: 0.8rem;
+  }
+  .label {
+    width: 6rem;
+    height: 4.6rem;
+    transition: all ease-in-out 0.3s;
+  }
+  .text-absolute {
+    top: 5.4rem;
+  }
+}
+@media (320px <= width <= 450px) {
+  .text-table-head {
+    font-size: 0.8rem;
+  }
+  .text-absolute {
+    top: 4.6rem;
+  }
+  .container-table {
+    padding: 2rem 1rem;
+  }
+  .label {
+    width: 4.8rem;
+    height: 4rem;
+    transition: all ease-in-out 0.3s;
+  }
+}
+@media (250px <= width <= 320px) {
+  .label {
+    width: 4.2rem;
+    height: 3.6rem;
+    transition: all ease-in-out 0.3s;
+  }
+}
+
+/* Payment */
+
+@media (320px <= width <= 506px) {
+  .payment {
+    text-align: start;
+  }
+}
+@media (320px <= width <= 450px) {
+  .method {
+    display: block;
+    text-align: start;
+  }
+  .method p {
+    margin-bottom: 0.4rem;
+  }
+  .btn-pay {
+    height: 5rem;
+  }
+}
+
+/* Nav, Footer */
+
+@media (320px <= width <= 700px) {
+  .nav-planform,
+  .footer-planform {
+    padding-inline: 1.6rem;
+  }
+}
+@media (320px <= width <= 450px) {
+  .nav-planform,
+  .footer-planform {
+    padding-inline: 1rem;
+  }
+}
